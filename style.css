@@ -1,0 +1,79 @@
+/* Custom Global Glows & Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Glowing Neon Background Effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(219, 39, 119, 0.08);
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(147, 51, 234, 0.06);
+    border-radius: 50%;
+    filter: blur(150px);
+    pointer-events: none;
+    z-index: -1;
+}
+/* Blinking Cursor Styling */
+.typed-cursor {
+    color: #db2777; /* Tailwind pink-600 color */
+    text-shadow: 0 0 10px rgba(219, 39, 119, 0.6);
+}
+
+/* Image container ko style karein */
+.hover-card {
+  position: relative;
+  width: 100%; /* Ya ek fixed width dein, e.g., 300px */
+  overflow: hidden; /* Bahar ke areas ko hide karne ke liye */
+  border-radius: 20px; /* Optional rounded corners */
+}
+
+/* Base image (jo pehle dikhegi) */
+.hover-card .image-1 {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease; /* Smooth fade-out effect */
+}
+
+/* Hover image (jo mouse jane par dikhegi) */
+.hover-card .image-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image ko area mein adjust karein */
+  opacity: 0; /* Shuru mein ise hide rakhein */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Jab mouse .hover-card par jaye, tab styles apply karein */
+.hover-card:hover .image-1 {
+  opacity: 0; /* Base image ko hide karein */
+}
+
+.hover-card:hover .image-2 {
+  opacity: 1; /* Hover image ko show karein */
+}
