@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <!-- Typed.js CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#0f0813] text-gray-200 font-sans selection:bg-pink-500 selection:text-white">
+
+    <!-- FIXED NAVBAR -->
+    <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
+        <nav
+            class="bg-[#1a0f24]/80 backdrop-blur-md border border-pink-500/20 px-6 py-3 rounded-full flex justify-between items-center shadow-[0_0_20px_rgba(219,39,119,0.1)]">
+            <a href="#" class="text-pink-500 font-bold tracking-wider text-sm md:text-base uppercase">MyPortfolio</a>
+            <div class="flex gap-2 md:gap-6 text-xs md:text-sm font-medium">
+                <a href="#home"
+                    class="px-3 py-1.5 rounded-full bg-pink-600 text-white shadow-[0_0_10px_rgba(219,39,119,0.4)] transition">Home</a>
+                <a href="#about"
+                    class="px-3 py-1.5 rounded-full hover:bg-white/5 transition text-gray-400 hover:text-white">About</a>
+                <a href="#projects"
+                    class="px-3 py-1.5 rounded-full hover:bg-white/5 transition text-gray-400 hover:text-white">Projects</a>
+                <a href="#contact"
+                    class="px-3 py-1.5 rounded-full hover:bg-white/5 transition text-gray-400 hover:text-white">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-5xl mx-auto px-4 pt-28 pb-16 space-y-24">
+
+        <!-- 1. HERO SECTION -->
+        <section id="home"
+            class="min-h-[70vh] flex flex-col-reverse md:flex-row items-center justify-between gap-8 bg-[#160b1e] p-8 md:p-12 rounded-3xl border border-pink-500/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+            <div class="flex-1 space-y-5 text-center md:text-left">
+
+                <a href="#contact"
+                    class="inline-block text-xs bg-pink-500/10 text-pink-400 hover:bg-pink-500/20 hover:text-white px-3 py-1 rounded-full border border-pink-500/20 transition duration-300 cursor-pointer shadow-[0_0_10px_rgba(219,39,119,0.05)] hover:shadow-[0_0_15px_rgba(219,39,119,0.2)]">
+                    <i class="fas fa-circle text-green-500 text-[8px] mr-1.5 animate-pulse"></i> Available for freelance
+                    work
+                </a>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">Hi, I'm <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-400">Kashish
+                        Saini</span></h1>
+                <p class="text-xl md:text-2xl font-semibold text-pink-400 min-h-[36px]">
+                    I'm a <span id="typing-text"></span>
+                </p>
+                <p class="text-gray-400 text-sm md:text-base max-w-md leading-relaxed">
+                    I create beautiful, functional, and user-centered digital experiences. With a passion for clean code
+                    and modern thoughtful web designs.
+                </p>
+                <div class="text-xs text-gray-400 space-y-1">
+                    <div><i class="fas fa-map-marker-alt text-pink-500 mr-2"></i> Based in India</div>
+                    <div><i class="fas fa-circle text-green-500 mr-2 text-[10px] animate-pulse"></i> Available Now</div>
+                </div>
+                <div class="flex flex-wrap gap-4 pt-2 justify-center md:justify-start">
+                    <a href="#contact"
+                        class="px-6 py-2.5 bg-pink-600 hover:bg-pink-700 text-white font-medium rounded-xl transition shadow-[0_0_15px_rgba(219,39,119,0.3)] flex items-center gap-2 text-sm">Hire
+                        Me <i class="fas fa-arrow-right text-xs"></i></a>
+                    <a href="assets/my-cv.pdf" download="My_Resume.pdf"
+                        class="px-6 py-2.5 bg-[#221230] hover:bg-[#2c183d] text-gray-200 font-medium rounded-xl border border-white/5 transition flex items-center gap-2 text-sm">
+                        <i class="fas fa-download text-xs"></i> Download CV
+                    </a>
+                </div>
+                <!-- Social Links -->
+                <div class="flex gap-4 pt-4 justify-center md:justify-start text-gray-400 text-lg">
+                    <a href="https://github.com/Kashish-saini415" class="hover:text-pink-500 transition"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kashish-saini-72677b280"
+                        class="hover:text-pink-500 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/Kashish_S7505" class="hover:text-pink-500 transition"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/itsme_kashish36" class="hover:text-pink-500 transition"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <!-- Avatar Card with glow effect -->
+            <div class="w-64 h-64 md:w-80 md:h-80 relative group">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-pink-500 to-purple-600 rounded-3xl blur-md opacity-40 group-hover:opacity-60 transition duration-500">
+                </div>
+                <div
+                    class="relative w-full h-full bg-[#1e102a] rounded-3xl overflow-hidden border border-pink-500/30 p-2 group">
+                    <!-- Image 1 (Shuru se colorful rahegi aur hover par smoothly chupigi) -->
+                    <img src="./assets/image1.png" alt="Default Photo"
+                        class="w-full h-full object-cover rounded-2xl transition-all duration-500 group-hover:opacity-0 absolute inset-0 p-2">
+
+                    <!-- Image 2 (Hover karne par dikhegi) -->
+                    <img src="./assets/image2.jpeg" alt="Hover Photo"
+                        class="w-full h-full object-cover rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 absolute inset-0 p-2">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. DASHBOARD / STATUS SECTION -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="md:col-span-2 bg-[#160b1e] p-6 rounded-2xl border border-white/5 flex flex-col justify-between space-y-6">
+                <div class="flex gap-2 text-[10px] uppercase font-mono tracking-widest text-gray-500">
+                    <span class="px-2 py-0.5 bg-green-500/10 text-green-400 rounded">● System Ready</span>
+                    <span class="px-2 py-0.5 bg-white/5 rounded">Portfolio v2.0</span>
+                </div>
+                <div class="space-y-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Welcome to my Portfolio Website</h2>
+                    <p class="text-gray-400 text-xs md:text-sm">Building modern, reliable, and fast digital experiences
+                        with a focus on clean UI and solid engineering.</p>
+                </div>
+                <div class="flex gap-3 text-xs font-mono pt-2">
+                    <span class="text-pink-400"><i class="fas fa-code mr-1"></i> Clean Code</span>
+                    <span class="text-purple-400"><i class="fas fa-user mr-1"></i> Interactive UI</span>
+                </div>
+            </div>
+            <div
+                class="bg-[#160b1e] p-6 rounded-2xl border border-pink-500/10 flex flex-col justify-between items-center text-center relative overflow-hidden group">
+                <div class="absolute -right-10 -top-10 w-24 h-24 bg-pink-500/10 rounded-full blur-xl"></div>
+                <span class="text-[10px] font-mono text-gray-500 uppercase tracking-wider self-start">Core UI
+                    Status</span>
+                <div class="my-4 relative flex items-center justify-center">
+                    <div
+                        class="w-24 h-24 rounded-full border-2 border-dashed border-pink-500/40 animate-[spin_10s_linear_infinite] absolute">
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-500 font-bold text-xs shadow-[inset_0_0_15px_rgba(219,39,119,0.2)]">
+                        CORE</div>
+                </div>
+                <div
+                    class="w-full flex justify-between text-[11px] font-mono text-gray-400 border-t border-white/5 pt-3">
+                    <div>⚡ 12ms <span class="text-gray-600 block text-[9px]">STABLE</span></div>
+                    <div>🚀 100% <span class="text-gray-600 block text-[9px]">ONLINE</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ABOUT ME SECTION -->
+        <section id="about"
+            class="bg-[#160b1e] p-8 md:p-12 rounded-3xl border border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="md:col-span-2 space-y-6">
+                <div class="space-y-2">
+                    <span class="text-xs uppercase tracking-widest text-pink-500 font-mono font-bold">About Me</span>
+                    <h2 class="text-3xl font-extrabold text-white">Discover My Journey</h2>
+                </div>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                    Hi! I'm <strong class="text-white">Kashish Saini</strong>, a <strong class="text-pink-400">B.Tech
+                        Graduate 2026 in Computer Science & Engineering</strong> and a passionate <strong
+                        class="text-pink-400">Full Stack Developer & Software Engineer</strong>. I specialize in
+                    building scalable web applications and AI-driven solutions, with a strong foundation in Data
+                    Structures & Algorithms (DSA).
+                </p>
+                <div class="space-y-3 font-mono text-xs md:text-sm">
+                    <!-- Languages & Core -->
+                    <div class="flex items-start gap-2">
+                        <span class="text-pink-500">#</span>
+                        <p class="text-gray-300">
+                            <strong class="text-white">Languages & Core:</strong> Python, Java, JavaScript, C++, DSA,
+                            and OOPs.
+                        </p>
+                    </div>
+                    <!-- Frontend & Backend -->
+                    <div class="flex items-start gap-2">
+                        <span class="text-pink-500">#</span>
+                        <p class="text-gray-300">
+                            <strong class="text-white">Web Development:</strong> React.js, Redux Toolkit, FastAPI,
+                            Django, and Node.js.
+                        </p>
+                    </div>
+                    <!-- AI & Databases -->
+                    <div class="flex items-start gap-2">
+                        <span class="text-pink-500">#</span>
+                        <p class="text-gray-300">
+                            <strong class="text-white">Databases & AI:</strong> SQL, MongoDB, Groq Cloud, Gemini API,
+                            and Git/GitHub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side Image with Hover Card Effect -->
+            <div class="flex justify-center">
+                <div
+                    class="border border-white/10 p-3 bg-[#110718] rounded-2xl rotate-3 shadow-xl max-w-[220px] relative group overflow-hidden">
+                    <!-- Default Image -->
+                    <img src="./assets/image44.jpg" alt="About Side"
+                        class="rounded-xl transition-all duration-500 group-hover:opacity-0">
+
+                    <!-- Hover Image (If you want to use the hover effect here too) -->
+                    <img src="./assets/image3.jpeg" alt="About Side Hover"
+                        class="rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 absolute inset-3 object-cover">
+
+                    <p class="text-center font-mono text-[10px] text-gray-500 mt-2">coding_mode.exe</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS SECTION -->
+        <section id="projects" class="space-y-8">
+            <div class="text-center max-w-md mx-auto space-y-2">
+                <span class="text-xs uppercase tracking-widest text-pink-500 font-mono font-bold">My Work</span>
+                <h2 class="text-3xl font-extrabold text-white">Recent Projects</h2>
+                <p class="text-gray-400 text-xs md:text-sm">A showcase of scalable web applications and AI-driven
+                    engineering solutions.</p>
+            </div>
+
+            <!-- Grid Layout for 2 Core Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                <!-- Project 1: StudyMate AI -->
+                <div
+                    class="bg-[#160b1e] border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-pink-500/20 transition p-5 space-y-4 shadow-[0_0_30px_rgba(0,0,0,0.3)]">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition">StudyMate AI
+                            </h3>
+                            <span
+                                class="text-[10px] uppercase font-mono tracking-wider bg-pink-500/10 text-pink-400 px-2 py-0.5 rounded border border-pink-500/20">Smart
+                                Student Assistant</span>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            Developed an AI-powered student assistant supporting native Hinglish chat, multi-format
+                            document parsing (PDF, DOCX, images), and live camera-capture context. Engineered an
+                            asynchronous pipeline using LiteLLM and Strands Agents to reduce latency by ~30% and lookup
+                            time by 40%.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Tech Stack Badges -->
+                        <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-gray-300">
+                            <span class="px-2 py-0.5 bg-white/5 rounded">FastAPI</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">Groq API (Llama 3.3)</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">LiteLLM</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">Strands Agents</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">Python</span>
+                        </div>
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-1">
+                            <a href="https://github.com/Kashish-saini415/StudyMate-AI" target="_blank"
+                                class="text-center text-xs py-2 bg-[#221230] text-gray-300 rounded-xl border border-white/5 hover:bg-white/5 transition flex items-center justify-center gap-1.5"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://studymate-ai-frontend.netlify.app/" target="_blank"
+                                class="text-center text-xs py-2 bg-pink-600 text-white font-medium rounded-xl hover:bg-pink-700 transition flex items-center justify-center gap-1.5"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: HCP Interaction AI CRM -->
+                <div
+                    class="bg-[#160b1e] border border-white/5 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-pink-500/20 transition p-5 space-y-4 shadow-[0_0_30px_rgba(0,0,0,0.3)]">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-white group-hover:text-pink-400 transition">HCP
+                                Interaction AI CRM</h3>
+                            <span
+                                class="text-[10px] uppercase font-mono tracking-wider bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded border border-purple-500/20">Pharma
+                                Automation</span>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            Built a pharma-specific CRM tool to parse raw healthcare-provider (HCP) meeting logs with
+                            automated sentiment analysis, cutting data-entry time by 50%. Designed instant Redux Toolkit
+                            state synchronization for JSON streams, improving performance by ~35%.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Tech Stack Badges -->
+                        <div class="flex flex-wrap gap-1.5 text-[10px] font-mono text-gray-300">
+                            <span class="px-2 py-0.5 bg-white/5 rounded">React.js</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">Redux Toolkit</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">FastAPI</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">SQLAlchemy</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded">SQLite</span>
+                        </div>
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-2 gap-3 pt-1">
+                            <a href="https://github.com/Kashish-saini415/hcp-interaction-ai-crm" target="_blank"
+                                class="text-center text-xs py-2 bg-[#221230] text-gray-300 rounded-xl border border-white/5 hover:bg-white/5 transition flex items-center justify-center gap-1.5"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://6a5763dfa99dc4b1c12a5217--hcp-interaction-ai-crm.netlify.app/"
+                                target="_blank"
+                                class="text-center text-xs py-2 bg-pink-600 text-white font-medium rounded-xl hover:bg-pink-700 transition flex items-center justify-center gap-1.5"><i
+                                    class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact"
+            class="bg-[#160b1e] p-8 md:p-12 rounded-3xl border border-white/5 max-w-2xl mx-auto space-y-6">
+            <div class="text-center space-y-1">
+                <h2 class="text-2xl font-bold text-white">Get In Touch</h2>
+                <p class="text-gray-400 text-xs md:text-sm">Have a project or just want to chat? Drop a message!</p>
+            </div>
+            <!-- Form setup with unique IDs -->
+            <form class="space-y-4" id="portfolioContactForm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" id="contactName" placeholder="Name" required
+                        class="w-full bg-[#100717] border border-white/5 focus:border-pink-500/5 px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-pink-500 text-white transition">
+                    <input type="email" id="contactEmail" placeholder="Email" required
+                        class="w-full bg-[#100717] border border-white/5 focus:border-pink-500/5 px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-pink-500 text-white transition">
+                </div>
+                <textarea rows="4" id="contactMessage" placeholder="Your Message" required
+                    class="w-full bg-[#100717] border border-white/5 focus:border-pink-500/5 px-4 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-pink-500 text-white transition resize-none"></textarea>
+                <button type="button" onclick="sendMail()"
+                    class="w-full py-2.5 bg-pink-600 hover:bg-pink-700 font-medium rounded-xl text-sm text-white transition shadow-[0_0_15px_rgba(219,39,119,0.2)]">Send
+                    Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-6 text-center text-xs text-gray-500 font-mono">
+        &copy; 2026 Amine. All rights reserved. Built with Passion.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
