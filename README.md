@@ -19,7 +19,7 @@ I am a **B.Tech Graduate in Computer Science & Engineering** and a passionate **
 | **Backend Dev** | FastAPI, Django, Node.js, Express.js, RESTful API Design |
 | **Databases & ORM** | MySQL, SQLite, MongoDB, SQLAlchemy (ORM), Airtable |
 | **AI / ML Integration** | Groq Cloud API (Llama 3.3), LiteLLM, Strands Agents, Gemini AI API, ElevenLabs, Prompt Engineering |
-| **Tools & DevOps** | Git, GitHub, VS Code, Twilio Automation, REST API Testing |
+| **Tools & DevOps** | Git, GitHub, VS Code, Kiro AI IDE, Twilio Automation, REST API Testing |
 
 ---
 
