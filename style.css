@@ -10,8 +10,8 @@ body {
 
 /* Glowing Neon Background Effect */
 body::before {
-    content: ""; git --version
-    pointer-events: none;
+    content: "" git --version ;
+    pointer-events: none ;
     z-index: -1;
 }
 
