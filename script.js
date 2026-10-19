@@ -1,55 +1,63 @@
-// Active Navbar Links Highlighting on Scroll
-const sections = document.querySelectorAll('section');
+// ---------- Active navbar link highlighting on scroll ----------
+const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('header nav div a');
+const ACTIVE = ['bg-pink-600', 'text-white', 'shadow-[0_0_10px_rgba(219,39,119,0.4)]'];
 
 window.addEventListener('scroll', () => {
-    let current = '';
+    let current = 'home';
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 150)) {
+        if (window.scrollY >= section.offsetTop - 160) {
             current = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
-        link.classList.remove('bg-pink-600', 'text-white', 'shadow-[0_0_10px_rgba(219,39,119,0.4)]');
-        link.classList.add('text-gray-400', 'hover:text-white');
-        
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.extract; // Reset fallback
-            link.classList.add('bg-pink-600', 'text-white', 'shadow-[0_0_10px_rgba(219,39,119,0.4)]');
-            link.classList.remove('text-gray-400', 'hover:text-white');
+        const isActive = link.getAttribute('href').slice(1) === current;
+        link.classList.remove(...ACTIVE, 'text-gray-400', 'hover:text-white');
+        if (isActive) {
+            link.classList.add(...ACTIVE);
+        } else {
+            link.classList.add('text-gray-400', 'hover:text-white');
         }
     });
 });
 
-// Typewriter Animation Setup
-var typed = new Typed('#typing-text', {
-    strings: ['Full Stack Developer', 'Software Engineer', 'AI Engineer'],
-    typeSpeed: 60,       // Text type hone ki speed (millisecond me)
-    backSpeed: 40,       // Text delete hone ki speed
-    backDelay: 1500,     // Pura text type hone ke baad rukne ka samay
-    loop: true,          // Isse animation khatam hone ke baad dobara shuru se chalega
-    showCursor: true,    // Typewriter wala blinking cursor (|) dikhayega
-    cursorChar: '|'      // Cursor ka character kya hoga
+// ---------- Typewriter animation (role order: AI/ML, GenAI, Full Stack, Software) ----------
+new Typed('#typing-text', {
+    strings: ['AI/ML Engineer', 'GenAI Engineer', 'Full Stack Developer', 'Software Engineer'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 1500,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|'
 });
 
-// Function to redirect user to email client with pre-filled details
-function sendMail() {
-    const name = document.getElementById("contactName").value.trim();
-    const email = document.getElementById("contactEmail").value.trim();
-    const message = document.getElementById("contactMessage").value.trim();
+// ---------- Fade-in on scroll ----------
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
 
-    // Check if fields are empty
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ---------- Contact form: open the mail client with pre-filled details ----------
+function sendMail() {
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const message = document.getElementById('contactMessage').value.trim();
+
     if (!name || !email || !message) {
-        alert("Please fill out all the fields before sending!");
+        alert('Please fill out all the fields before sending!');
         return;
     }
 
-    // Dynamic Email Constructing
-    const yourEmail = "sainikashish415@gmail.com"; //
+    const yourEmail = 'sainikashish415@gmail.com';
     const subject = encodeURIComponent(`Portfolio Message from ${name}`);
     const body = encodeURIComponent(
         `Hi Kashish,\n\nYou have received a new message from your portfolio website:\n\n` +
@@ -58,6 +66,5 @@ function sendMail() {
         `Message:\n${message}`
     );
 
-    // Opening Mail Client using standard mailto URI
     window.location.href = `mailto:${yourEmail}?subject=${subject}&body=${body}`;
 }

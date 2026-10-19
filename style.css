@@ -10,15 +10,7 @@ body {
 
 /* Glowing Neon Background Effect */
 body::before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(219, 39, 119, 0.08);
-    border-radius: 50%;
-    filter: blur(120px);
+    content: ""; git --version
     pointer-events: none;
     z-index: -1;
 }
@@ -76,4 +68,35 @@ body::after {
 
 .hover-card:hover .image-2 {
   opacity: 1; /* Hover image ko show karein */
+}
+
+/* Skill / tech badges */
+.skill {
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.skill:hover {
+    background: rgba(219, 39, 119, 0.15);
+    color: #fff;
+}
+
+/* Fade-in on scroll (added by script.js) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Offset anchor jumps so the fixed navbar doesn't cover headings */
+section[id] {
+    scroll-margin-top: 90px;
 }
